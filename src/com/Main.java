@@ -1,9 +1,4 @@
 import com.basic.JavaExamples.*;
-import java.awt.*;
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.Random;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String args[]){
@@ -176,7 +171,7 @@ public class Main {
         customer1.deposit(2000);
         customer1.withdraw(4000);
 
-*/
+
 
 
         Insect insect = new Insect(5, 6);
@@ -193,8 +188,6 @@ public class Main {
         cricket.says();
         cricket.jump();
 
-
-/*
         Dog dogInst =  new Dog("Puppy", 2);
         if(dogInst instanceof Dog){
             dogInst.play();
@@ -228,7 +221,12 @@ public class Main {
 
         Predicate isEven = num -> num % 2 == 0;
         System.out.println(isEven.test(2));
-*/
+
+
+         */
+
+
+FileHandling fc = new FileHandling();
 
     }
 }
