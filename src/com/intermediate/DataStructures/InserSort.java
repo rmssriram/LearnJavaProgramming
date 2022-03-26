@@ -1,28 +1,25 @@
 package com.intermediate.DataStructures;
 
-/** Bubble Sorting - is the simplest algorithm that works
- * repeatedly swapping the adjacent elements if they are in wrong order
- *
- * To implement Bubble Sorting, following steps are involved.
+/** Insertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands.
+ * To implement Insertion Sorting, following steps are involved.
  * Step 1: Starting with the first element(index = 0), compare the current element
  *         with the next element of the array.
  * Step 2: If the current element is greater than the next element of the array, swap them.
  * Step 3: If the current element is less than the next element, move to the next element. Repeat Step 1.
  */
 
-public class BubbleSort {
+public class InserSort {
     // Function to sort the elements using Bubble Sorting mechanism
-    public void bubbleSort(int[] arr) {
+    public void inserSort(int[] arr) {
         int n = arr.length;
-        System.out.print("Array Length: " +n);
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n - i - 1; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                }
-            }
+        for (int i = 0; i <= n - 1; i++) {
+           int curr=arr[i];
+           int j=i-1;
+           while (j>=0 && arr[j]>curr){
+               arr[j+1]=arr[j];
+               j=j-1;
+           }
+           arr[j+1]=curr;
         }
     }
 
@@ -31,14 +28,15 @@ public class BubbleSort {
         for (int elm : arr) {
             System.out.println(elm);
         }
+
     }
 
     public static void main(String args[]) {
         int[] arr = {10, 2, 8, 6, 7, 3};
-        BubbleSort obj = new BubbleSort();
+        InserSort obj = new InserSort();
         System.out.println("Before Sorting: ");
         obj.printArray(arr);
-        obj.bubbleSort(arr);
+        obj.inserSort(arr);
         System.out.println("After Sorting: ");
         obj.printArray(arr);
     }
